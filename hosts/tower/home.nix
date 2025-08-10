@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  programs,
   ...
 }: {
   imports = [
@@ -99,4 +100,5 @@
   };
 
   programs.home-manager.enable = true;
-}
+
+ }
