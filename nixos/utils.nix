@@ -98,7 +98,8 @@ in {
     xdg-utils
     wget
     curl
-    vim
+  # vim
+    helix
     go
     comma
   ];

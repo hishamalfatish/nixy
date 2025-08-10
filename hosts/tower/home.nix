@@ -92,7 +92,7 @@
     ];
 
     # Import my profile picture, used by the hyprpanel dashboard
-    file.".face.icon" = {source = ./profile_picture.png;};
+    file.".face.icon" = {source = ./gengar.png;};
 
     # Don't touch this
     stateVersion = "24.05";
