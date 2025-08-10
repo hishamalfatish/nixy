@@ -44,7 +44,7 @@ in {
             "systray"
             "volume"
             "bluetooth"
-            "battery"
+            # "battery"
             "network"
             "clock"
             "notifications"
@@ -185,7 +185,7 @@ in {
       menus.dashboard.directories.right.directory3.label = "󰉏     Pictures";
       menus.dashboard.directories.right.directory3.command = "xdg-open ${homeDir}/Pictures";
 
-      menus.power.lowBatteryNotification = true;
+      # menus.power.lowBatteryNotification = true;
 
       wallpaper.enable = false;
 
