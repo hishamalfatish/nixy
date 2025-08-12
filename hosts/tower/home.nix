@@ -108,6 +108,7 @@
     Host *
       AddKeysToAgent yes
       IdentityFile ~/.ssh/key
+      agentTimeout = "1h"
   '';
 };
 
