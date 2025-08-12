@@ -1,2 +1,2 @@
 .sops.yaml
-**/secret.json
+secret.json
