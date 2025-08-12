@@ -101,4 +101,16 @@
 
   programs.home-manager.enable = true;
 
+# ssh-agent
+  programs.ssh = {
+  enable = true;
+  extraConfig = ''
+    Host *
+      AddKeysToAgent yes
+      IdentityFile ~/.ssh/key
+  '';
+};
+
+services.ssh-agent.enable = true;
+
  }

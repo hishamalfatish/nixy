@@ -141,8 +141,13 @@ in {
       theme.osd.margins = "0px 0px 0px 10px";
       theme.osd.muted_zero = true;
 
-      menus.clock.weather.location = location;
-      menus.clock.weather.unit = "metric";
+      menus.clock.weather = {
+        enabled = true;
+        location = location;
+        unit = "metric";
+        key = "${homeDir}/.config/nixos/home/system/hyprpanel/secret.json";
+        refresh = 900;
+      };
       menus.dashboard.powermenu.confirmation = false;
       menus.dashboard.powermenu.avatar.image = "~/.face.icon";
 
