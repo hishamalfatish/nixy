@@ -102,14 +102,10 @@
   programs.home-manager.enable = true;
 
 # ssh-agent
-  programs.ssh = {
-  enable = true;
-  extraConfig = ''
-    Host *
-      AddKeysToAgent yes
-      IdentityFile ~/.ssh/key
-      agentTimeout = "1h"
-  '';
+  programs.keychain = {
+    enable = true;
+    agents = [ "ssh "];
+    keys = [ "~/.ssh/key" ];
 };
 
 services.ssh-agent.enable = true;
