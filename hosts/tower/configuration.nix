@@ -22,7 +22,9 @@
   ];
 
   home-manager.users."${config.var.username}" = import ./home.nix;
+  # loader for dynamic library
   programs.nix-ld.enable = true;
+
   # Don't touch this
   system.stateVersion = "24.05";
 }

@@ -105,9 +105,8 @@
   programs.keychain = {
     enable = true;
     keys = [ "~/.ssh/key" ];
-    extraFlags = [ "--quiet" "--quick" "--timeout" "480" ];
-    enableZshIntegration = false;
-    enableXsessionIntegration = true;
+    extraFlags = [ "--quiet" "--quick" ];
+    enableZshIntegration = true;
 };
 
 services.ssh-agent.enable = true;
