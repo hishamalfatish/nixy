@@ -41,7 +41,7 @@ in {
           left = [ "dashboard" "workspaces" "windowtitle" ];
           middle = [ "media" "cava" ];
           right = [
-            "systray"
+            # "systray"
             "volume"
             "bluetooth"
             # "battery"
