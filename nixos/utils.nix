@@ -102,6 +102,7 @@ in {
     helix
     go
     comma
+    tmux
   ];
 
   xdg.portal = {

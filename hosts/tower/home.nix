@@ -104,8 +104,10 @@
 # ssh-agent
   programs.keychain = {
     enable = true;
-    agents = [ "ssh "];
     keys = [ "~/.ssh/key" ];
+    extraFlags = [ "--quiet" "--quick" "--timeout" "480" ];
+    enableZshIntegration = false;
+    enableXsessionIntegration = true;
 };
 
 services.ssh-agent.enable = true;
