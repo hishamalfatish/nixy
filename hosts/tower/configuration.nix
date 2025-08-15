@@ -39,8 +39,10 @@
       requests
       selenium
       pandas
+      openpyxl
     ]))
     geckodriver
+    firefox
   ];
 
   # Don't touch this
