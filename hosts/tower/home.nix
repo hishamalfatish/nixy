@@ -106,7 +106,7 @@
     enable = true;
     keys = [ "~/.ssh/key" ];
     extraFlags = [ "--quiet" "--quick" ];
-    enableZshIntegration = true;
+    enableZshIntegration = false;
 };
 
 services.ssh-agent.enable = true;
