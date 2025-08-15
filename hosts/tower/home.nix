@@ -103,11 +103,26 @@
   programs.home-manager.enable = true;
 
 # ssh-agent
-  programs.keychain = {
-    enable = true;
-    keys = [ "~/.ssh/key" ];
-    extraFlags = [ "--quiet" "--quick" ];
-    enableZshIntegration = false;
+programs.ssh = {
+  enable = true;
+  matchBlocks = {
+    "*" = {
+      identitiesOnly = true;
+      identityFile = [ "~/.ssh/key" ];
+      extraOptions = {
+         addKeysToAgent = "yes";
+      };
+    };
+    "github.com" = { user = "git"; };
+    "gitlab.com" = { user = "git"; };
+  };
+};
+
+programs.keychain = {
+   enable = true;
+   keys = [ "~/.ssh/key" ];
+   extraFlags = [ "--quiet" "--quick" ];
+   enableZshIntegration = false;
 };
 
  }
