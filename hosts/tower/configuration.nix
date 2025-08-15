@@ -1,4 +1,4 @@
-{config, ...}: {
+{config, pkgs, ...}: {
   imports = [
     # Mostly system related configuration
     ../../nixos/nvidia.nix # CHANGEME: Remove this line if you don't have an Nvidia GPU
@@ -24,8 +24,21 @@
   home-manager.users."${config.var.username}" = import ./home.nix;
   # loader for dynamic library
   programs.nix-ld.enable = true;
-  
+
+  # sudo
   security.sudo.wheelNeedsPassword = true;
+  security.sudo = {
+    enable = true;
+    extraConfig = ''
+      Defaults timestamp_timeout=5
+    '';
+  };
+
+  environment.systemPackages = [
+    (pkgs.python312.withPackages (ps: with ps; [
+      requests
+    ]))
+  ];
 
   # Don't touch this
   system.stateVersion = "24.05";

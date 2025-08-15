@@ -103,6 +103,7 @@ in {
     go
     comma
     tmux
+    vscode
   ];
 
   xdg.portal = {
