@@ -20,8 +20,8 @@
     ../../home/programs/thunar
     ../../home/programs/lazygit
     ../../home/programs/zen
-    ../../home/programs/duckduckgo-colorscheme
-    ../../home/programs/discord
+    # ../../home/programs/duckduckgo-colorscheme
+    # ../../home/programs/discord
     ../../home/programs/tailscale
 
     # Scripts
@@ -51,15 +51,7 @@
       bitwarden # Password manager
       vlc # Video player
       blanket # White-noise app
-      obsidian # Note taking app
-      planify # Todolists
-      gnome-calendar # Calendar
-      textpieces # Manipulate texts
       curtail # Compress images
-      resources # Ressource monitor
-      gnome-clocks # Clocks app
-      gnome-text-editor # Basic graphic text editor
-      mpv # Video player
 
       # Dev
       go
@@ -80,16 +72,13 @@
       pfetch
       btop
       fastfetch
-
+      vscode
       # Just cool
       peaclock
       cbonsai
       pipes
       cmatrix
 
-      # Backup
-      brave
-      vscode
 
    ];
 
