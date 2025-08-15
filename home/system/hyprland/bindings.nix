@@ -25,7 +25,7 @@
         "$shiftMod,left, layoutmsg, addmaster" # Add to master
         "$shiftMod,right, layoutmsg, removemaster" # Remove from master
 
-        "$mod, S, exec, screenshot region" # Screenshot region
+        "$mod,S, exec, screenshot region swappy" # Screenshot region
         ",PRINT, exec, screenshot monitor" # Screenshot monitor
         "$shiftMod,S, exec, screenshot window" # Screenshot window
         "ALT,S, exec, screenshot region swappy" # Screenshot region then edit
