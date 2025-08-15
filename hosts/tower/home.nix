@@ -90,7 +90,8 @@
       # Backup
       brave
       vscode
-    ];
+
+   ];
 
     # Import my profile picture, used by the hyprpanel dashboard
     file.".face.icon" = {source = ./gengar.png;};
@@ -106,7 +107,7 @@
     enable = true;
     keys = [ "~/.ssh/key" ];
     extraFlags = [ "--quiet" "--quick" ];
-    enableZshIntegration = false;
+    enableZshIntegration = true;
 };
 
 services.ssh-agent.enable = true;

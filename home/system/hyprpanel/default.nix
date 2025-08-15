@@ -119,7 +119,7 @@ in {
       bar.volume.label = false;
       bar.network.truncation_size = 12;
       bar.bluetooth.label = false;
-      bar.clock.format = "%d.%m  %H:%M";
+      bar.clock.format = "%A, %d.%m  %H:%M:%S";
       bar.notifications.show_total = true;
       bar.media.show_active_only = true;
 

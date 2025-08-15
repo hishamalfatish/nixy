@@ -34,10 +34,13 @@
     '';
   };
 
-  environment.systemPackages = [
-    (pkgs.python312.withPackages (ps: with ps; [
+  environment.systemPackages = with pkgs; [
+    (pkgs.python313.withPackages (ps: with ps; [
       requests
+      selenium
+      pandas
     ]))
+    geckodriver
   ];
 
   # Don't touch this
