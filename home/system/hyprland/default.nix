@@ -19,7 +19,6 @@ in {
     ./animations.nix
     ./bindings.nix
     ./polkitagent.nix
-    ./keyboard-backlight.nix # CHANGEME: This is for omen laptop only
     ./hyprspace.nix
   ];
 
@@ -65,7 +64,6 @@ in {
       exec-once = [
         "dbus-update-activation-environment --systemd --all &"
         "systemctl --user enable --now hyprpaper.service &"
-        "systemctl --user enable --now nextcloud-client.service  &"
       ];
 
       monitor = [

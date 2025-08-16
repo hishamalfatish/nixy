@@ -8,7 +8,7 @@
     ../../nixos/home-manager.nix
     ../../nixos/nix.nix
     ../../nixos/systemd-boot.nix
-    ../../nixos/sddm.nix
+    ../../nixos/tuigreet.nix
     ../../nixos/users.nix
     ../../nixos/utils.nix
     ../../nixos/tailscale.nix
@@ -33,7 +33,7 @@
       Defaults timestamp_timeout=5
     '';
   };
-
+  # python environment
   environment.systemPackages = with pkgs; [
     (pkgs.python313.withPackages (ps: with ps; [
       requests
@@ -44,6 +44,12 @@
     geckodriver
     firefox
   ];
+
+  systemd.services.polkit = {
+    after = [ "dbus.socket" ];
+    wants = [ "dbus.socket" ];
+    requires = [ "dbus.socket" ];
+  };
 
   # Don't touch this
   system.stateVersion = "24.05";

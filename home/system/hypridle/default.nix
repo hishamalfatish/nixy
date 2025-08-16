@@ -27,6 +27,7 @@
       ];
     };
   };
+  # avoid running idle in lock screen
   systemd.user.services.hypridle.Unit.After =
     lib.mkForce "graphical-session.target";
 }

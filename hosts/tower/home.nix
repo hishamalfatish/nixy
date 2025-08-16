@@ -2,6 +2,7 @@
   pkgs,
   config,
   programs,
+  services,
   ...
 }: {
   imports = [
@@ -16,12 +17,9 @@
     ../../home/programs/git
     ../../home/programs/git/signing.nix
     ../../home/programs/spicetify
-    # ../../home/programs/nextcloud
     ../../home/programs/thunar
     ../../home/programs/lazygit
     ../../home/programs/zen
-    # ../../home/programs/duckduckgo-colorscheme
-    # ../../home/programs/discord
     ../../home/programs/tailscale
 
     # Scripts
@@ -29,7 +27,7 @@
 
     # System (Desktop environment like stuff)
     ../../home/system/hyprland
-    # ../../home/system/hypridle
+    ../../home/system/hypridle
     ../../home/system/hyprlock
     ../../home/system/hyprpanel
     ../../home/system/hyprpaper
@@ -52,7 +50,7 @@
       vlc # Video player
       blanket # White-noise app
       curtail # Compress images
-
+      steam
       # Dev
       go
       bun
@@ -73,13 +71,13 @@
       btop
       fastfetch
       vscode
+
       # Just cool
       peaclock
       cbonsai
       pipes
       cmatrix
-
-
+   
    ];
 
     # Import my profile picture, used by the hyprpanel dashboard
