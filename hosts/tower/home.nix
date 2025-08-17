@@ -110,4 +110,10 @@ programs.ssh = {
     "git.homevps.io" = { user = "git"; };
     };
   };
+programs.keychain = {
+  enable = true;
+  keys = [ "key" ];
+  agents = [ "ssh" ];
+  enableZshIntegration = true;
+};
 }
