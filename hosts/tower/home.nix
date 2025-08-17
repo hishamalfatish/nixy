@@ -113,7 +113,6 @@ programs.ssh = {
 programs.keychain = {
   enable = true;
   keys = [ "key" ];
-  agents = [ "ssh" ];
   enableZshIntegration = true;
 };
 }
