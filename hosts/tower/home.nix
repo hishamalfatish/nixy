@@ -90,9 +90,11 @@
     stateVersion = "24.05";
   };
 
-  programs.home-manager.enable = true;
+programs.home-manager.enable = true;
 
 # ssh-agent
+services.ssh-agent.enable = true;
+
 programs.ssh = {
   enable = true;
   matchBlocks = {
@@ -106,14 +108,6 @@ programs.ssh = {
     "github.com" = { user = "git"; };
     "gitlab.com" = { user = "git"; };
     "git.homevps.io" = { user = "git"; };
+    };
   };
-};
-
-programs.keychain = {
-   enable = true;
-   keys = [ "~/.ssh/key" ];
-   extraFlags = [ "--quiet" "--quick" ];
-   enableZshIntegration = false;
- };
- 
 }
