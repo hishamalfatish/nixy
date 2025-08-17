@@ -49,26 +49,15 @@
             {
               nixpkgs.overlays = [];
               _module.args = {inherit inputs;};
+              home-manager.extraSpecialArgs = { inherit inputs; };
             }
            # inputs.nixos-hardware.nixosModules.omen-16-n0005ne # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
+            inputs.sops-nix.nixosModules.sops
             ./hosts/tower/configuration.nix # CHANGEME: change the path to match your host folder
           ];
         };
-      # Jack is my server
-      jack = nixpkgs.lib.nixosSystem {
-        modules = [
-          {_module.args = {inherit inputs;};}
-          inputs.home-manager.nixosModules.home-manager
-          inputs.stylix.nixosModules.stylix
-          inputs.sops-nix.nixosModules.sops
-          inputs.nixarr.nixosModules.default
-          inputs.search-nixos-api.nixosModules.search-nixos-api
-          inputs.eleakxir.nixosModules.eleakxir-backend
-          ./hosts/server/configuration.nix
-        ];
-      };
-    };
+     };
   };
 }

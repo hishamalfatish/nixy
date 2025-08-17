@@ -11,8 +11,12 @@ in {
 
   # Add go binaries to the PATH
   home.sessionPath = ["$HOME/go/bin"];
-
-  programs.zsh = {
+  
+  home.sessionVariables = {
+      EDITOR = "hx";
+    };
+    
+   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
@@ -20,6 +24,8 @@ in {
       enable = true;
       highlighters = ["main" "brackets" "pattern" "regexp" "root" "line"];
     };
+
+
     historySubstringSearch.enable = true;
 
     history = {

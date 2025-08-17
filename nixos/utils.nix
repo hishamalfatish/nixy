@@ -104,6 +104,8 @@ in {
     comma
     tmux
     vscode
+    age
+    sops
   ];
 
   xdg.portal = {

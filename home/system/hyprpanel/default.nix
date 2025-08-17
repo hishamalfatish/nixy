@@ -1,8 +1,8 @@
 # Hyprpanel is the bar on top of the screen
 # Display information like workspaces, battery, wifi, ...
-{config, ...}: let
+{config,process, ...}:
+let
   transparentButtons = config.theme.bar.transparentButtons;
-
   accent = "#${config.lib.stylix.colors.base0D}";
   accent-alt = "#${config.lib.stylix.colors.base03}";
   background = "#${config.lib.stylix.colors.base00}";
@@ -11,7 +11,6 @@
   foregroundOnWallpaper = "#${config.theme.textColorOnWallpaper}";
   font = "${config.stylix.fonts.serif.name}";
   fontSizeForHyprpanel = "${toString config.stylix.fonts.sizes.desktop}px";
-
   rounding = config.theme.rounding;
   border-size = config.theme.border-size;
 
@@ -28,8 +27,9 @@
 
   homeDir = "/home/${config.var.username}";
 
+
 in {
-  wayland.windowManager.hyprland.settings.exec-once = ["hyprpanel"];
+  wayland.windowManager.hyprland.settings.exec-once = [ "hyprpanel" ];
 
   programs.hyprpanel = {
     enable = true;
@@ -145,7 +145,7 @@ in {
         enabled = true;
         location = location;
         unit = "metric";
-        key = "${homeDir}/.config/nixos/home/system/hyprpanel/secret.json";
+        key = config.sops.secrets."weather.json".path;
         refresh = 900;
       };
       menus.dashboard.powermenu.confirmation = false;

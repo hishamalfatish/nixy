@@ -3,6 +3,7 @@
   config,
   programs,
   services,
+  inputs,
   ...
 }: {
   imports = [
@@ -37,6 +38,7 @@
     ../../home/system/walker
     ../../home/system/udiskie
     # ../../home/system/clipman
+    ./secrets
 
   ];
 
@@ -110,6 +112,6 @@ programs.keychain = {
    keys = [ "~/.ssh/key" ];
    extraFlags = [ "--quiet" "--quick" ];
    enableZshIntegration = false;
-};
-
- }
+ };
+ 
+}
