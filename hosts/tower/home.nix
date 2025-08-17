@@ -73,6 +73,7 @@
       btop
       fastfetch
       vscode
+      logiops
 
       # Just cool
       peaclock
@@ -104,6 +105,7 @@ programs.ssh = {
     };
     "github.com" = { user = "git"; };
     "gitlab.com" = { user = "git"; };
+    "git.homevps.io" = { user = "git"; };
   };
 };
 
