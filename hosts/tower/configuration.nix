@@ -33,18 +33,6 @@
       Defaults timestamp_timeout=5
     '';
   };
-  # python environment
-  environment.systemPackages = with pkgs; [
-    (pkgs.python313.withPackages (ps: with ps; [
-      requests
-      selenium
-      pandas
-      openpyxl
-    ]))
-    geckodriver
-    firefox
-  ];
-
   systemd.services.polkit = {
     after = [ "dbus.socket" ];
     wants = [ "dbus.socket" ];
