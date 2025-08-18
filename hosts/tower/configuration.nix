@@ -33,12 +33,14 @@
       Defaults timestamp_timeout=5
     '';
   };
+  # user groups
+  users.users."${config.var.username}".extraGroups = [ "docker" ];
   systemd.services.polkit = {
     after = [ "dbus.socket" ];
     wants = [ "dbus.socket" ];
     requires = [ "dbus.socket" ];
   };
-
+ virtualisation.docker.enable = true;
   # Don't touch this
   system.stateVersion = "24.05";
 }

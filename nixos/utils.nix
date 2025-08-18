@@ -106,6 +106,7 @@ in {
     vscode
     age
     sops
+    docker
   ];
 
   xdg.portal = {
