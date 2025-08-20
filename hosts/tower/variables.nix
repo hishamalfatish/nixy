@@ -18,7 +18,7 @@
 
     keyboardLayout = "de";
 
-    location = "Leipzig";
+    location = "51.3397,12.3731"; #Leipzig
     timeZone = "Europe/Berlin";
     defaultLocale = "de_DE.UTF-8";
     extraLocale = "de_DE.UTF-8";
