@@ -150,6 +150,7 @@ in {
           location = location;
           unit = "metric";
           key = config.sops.secrets."weather.json".path;
+          # key = "310d42266af54016a9b215453251208";
           refresh = 900;
       };
      };

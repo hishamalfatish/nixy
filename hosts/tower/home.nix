@@ -22,6 +22,7 @@
     ../../home/programs/lazygit
     ../../home/programs/zen
     ../../home/programs/tailscale
+    ../../home/programs/helix
 
     # Scripts
     ../../home/scripts # All scripts
@@ -115,4 +116,6 @@ programs.keychain = {
   keys = [ "key" ];
   enableZshIntegration = true;
 };
+# stylix helix theme
+stylix.targets.helix.enable = false;
 }

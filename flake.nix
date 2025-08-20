@@ -38,6 +38,10 @@
       url = "github:anotherhadi/eleakxir-temp";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin-helix = {
+      url = "github:catppuccin/helix";
+      flake = false;
+    };
   };
 
   outputs = inputs @ {nixpkgs, ...}: {

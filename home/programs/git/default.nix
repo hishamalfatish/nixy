@@ -26,7 +26,7 @@ in {
       color.ui = "1";
     };
     aliases = {
-      essa = "push --force";
+      pf = "push --force";
       co = "checkout";
       fuck = "commit --amend -m";
       c = "commit -m";
