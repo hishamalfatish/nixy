@@ -98,8 +98,6 @@ in {
     xdg-utils
     wget
     curl
-  # vim
-    helix
     go
     comma
     tmux
