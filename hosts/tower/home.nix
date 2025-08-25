@@ -36,9 +36,9 @@
     ../../home/system/wofi
     ../../home/system/zathura
     ../../home/system/mime
-    ../../home/system/walker
     ../../home/system/udiskie
-    # ../../home/system/clipman
+    # ../../home/system/walker
+    ../../home/system/clipman
     ./secrets
 
   ];
@@ -54,11 +54,11 @@
       blanket # White-noise app
       curtail # Compress images
       steam
+      
       # Dev
       go
       bun
       nodejs
-      python3
       jq
       just
       pnpm

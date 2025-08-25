@@ -40,7 +40,17 @@
     wants = [ "dbus.socket" ];
     requires = [ "dbus.socket" ];
   };
+  environment.systemPackages = with pkgs; [
+  (python313.withPackages (ps: with ps; [
+    pandas
+    selenium
+    openpyxl
+  ]))
+  firefox
+  geckodriver
+];
  virtualisation.docker.enable = true;
+
   # Don't touch this
   system.stateVersion = "24.05";
 }

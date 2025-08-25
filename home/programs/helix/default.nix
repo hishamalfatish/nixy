@@ -7,7 +7,7 @@ programs.helix = {
     theme = "catppuccin_macchiato";
     editor = {
       "true-color" = true;
-      line-number = "relative";
+      line-number = "absolute";
       cursorline = true;
       scrolloff = 5;
 
