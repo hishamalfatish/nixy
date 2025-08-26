@@ -50,7 +50,7 @@
   geckodriver
 ];
  virtualisation.docker.enable = true;
-
+ boot.blacklistedKernelModules = [ "sp5100_tco" ];
   # Don't touch this
   system.stateVersion = "24.05";
 }

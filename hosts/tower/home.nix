@@ -37,7 +37,6 @@
     ../../home/system/zathura
     ../../home/system/mime
     ../../home/system/udiskie
-    # ../../home/system/walker
     ../../home/system/clipman
     ./secrets
 

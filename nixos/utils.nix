@@ -105,6 +105,7 @@ in {
     age
     sops
     docker
+    asciinema_3
   ];
 
   xdg.portal = {
