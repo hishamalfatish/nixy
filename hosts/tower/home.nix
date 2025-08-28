@@ -39,7 +39,6 @@
     ../../home/system/udiskie
     ../../home/system/clipman
     ./secrets
-
   ];
 
   home = {
@@ -53,7 +52,7 @@
       blanket # White-noise app
       curtail # Compress images
       steam
-      
+
       # Dev
       go
       bun
@@ -63,6 +62,8 @@
       pnpm
       air
       duckdb
+      jdk21_headless
+      jetbrains.idea-community
 
       # Utils
       zip
@@ -80,8 +81,7 @@
       cbonsai
       pipes
       cmatrix
-   
-   ];
+    ];
 
     # Import my profile picture, used by the hyprpanel dashboard
     file.".face.icon" = {source = ./gengar.png;};
@@ -90,31 +90,31 @@
     stateVersion = "24.05";
   };
 
-programs.home-manager.enable = true;
+  programs.home-manager.enable = true;
 
-# ssh-agent
-services.ssh-agent.enable = true;
+  # ssh-agent
+  services.ssh-agent.enable = true;
 
-programs.ssh = {
-  enable = true;
-  matchBlocks = {
-    "*" = {
-      identitiesOnly = true;
-      identityFile = [ "~/.ssh/key" ];
-      extraOptions = {
-         addKeysToAgent = "yes";
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "*" = {
+        identitiesOnly = true;
+        identityFile = ["~/.ssh/key"];
+        extraOptions = {
+          addKeysToAgent = "yes";
+        };
       };
-    };
-    "github.com" = { user = "git"; };
-    "gitlab.com" = { user = "git"; };
-    "git.homevps.io" = { user = "git"; };
+      "github.com" = {user = "git";};
+      "gitlab.com" = {user = "git";};
+      "git.homevps.io" = {user = "git";};
     };
   };
-programs.keychain = {
-  enable = true;
-  keys = [ "key" ];
-  enableZshIntegration = true;
-};
-# stylix helix theme
-stylix.targets.helix.enable = false;
+  programs.keychain = {
+    enable = true;
+    keys = ["key"];
+    enableZshIntegration = true;
+  };
+  # stylix helix theme
+  stylix.targets.helix.enable = false;
 }

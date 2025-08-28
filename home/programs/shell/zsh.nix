@@ -56,6 +56,8 @@ in {
       icat = "${pkgs.kitty}/bin/kitty +kitten icat";
       cat = "bat --theme=base16 --color=always --paging=never --tabs=2 --wrap=never --plain";
       mkdir = "mkdir -p";
+      record  = "asciinema rec"; 
+      play = "asciinema play";
 
       obsidian-no-gpu = "env ELECTRON_OZONE_PLATFORM_HINT=auto obsidian --ozone-platform=x11";
       wireguard-import = "nmcli connection import type wireguard file";
