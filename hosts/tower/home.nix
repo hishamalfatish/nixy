@@ -23,6 +23,7 @@
     ../../home/programs/zen
     ../../home/programs/tailscale
     ../../home/programs/helix
+    ../../home/programs/ssh
 
     # Scripts
     ../../home/scripts # All scripts
@@ -92,29 +93,6 @@
 
   programs.home-manager.enable = true;
 
-  # ssh-agent
-  services.ssh-agent.enable = true;
-
-  programs.ssh = {
-    enable = true;
-    matchBlocks = {
-      "*" = {
-        identitiesOnly = true;
-        identityFile = ["~/.ssh/key"];
-        extraOptions = {
-          addKeysToAgent = "yes";
-        };
-      };
-      "github.com" = {user = "git";};
-      "gitlab.com" = {user = "git";};
-      "git.homevps.io" = {user = "git";};
-    };
-  };
-  programs.keychain = {
-    enable = true;
-    keys = ["key"];
-    enableZshIntegration = true;
-  };
   # stylix helix theme
   stylix.targets.helix.enable = false;
 }
