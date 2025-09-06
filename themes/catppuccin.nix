@@ -84,8 +84,8 @@
 
     polarity = "dark";
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/catstraunaut_blue.png";
-      sha256 = "1abr840mbyqhav7571n7yyh230c77i6zx5f9wz3xaxkcf24jrclq";
+      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/grey-mountains_grey.png";
+      sha256 = "1vx6ms19aw60v2xbhfwxh15z5x689ii2199rmz9z3w5d0q38j8i5";
     };
   };
 }
