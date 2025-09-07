@@ -1,9 +1,6 @@
 {
   pkgs,
   config,
-  programs,
-  services,
-  inputs,
   ...
 }: {
   imports = [
@@ -65,6 +62,7 @@
       duckdb
       jdk21_headless
       jetbrains.idea-community
+      jetbrains.pycharm-community
 
       # Utils
       zip
