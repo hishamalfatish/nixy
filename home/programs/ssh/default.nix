@@ -33,7 +33,12 @@
           AddKeysToAgent = "yes";
         };
       };
-      "github.com" = {user = "git";};
+      "github.com" = {
+        user = "git";
+        identitiesOnly = true;
+        identityFile = ["~/.ssh/key"];
+        extraOptions = {AddKeysToAgent = "yes";};
+      };
       "gitlab.com" = {user = "git";};
       "git.homevps.io" = {user = "git";};
     };
