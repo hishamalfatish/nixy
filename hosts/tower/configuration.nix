@@ -52,6 +52,9 @@
         pandas
         selenium
         openpyxl
+        twilio
+        flask
+        requests
       ]))
     firefox
     geckodriver
