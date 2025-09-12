@@ -106,6 +106,7 @@ in {
     sops
     docker
     asciinema_3
+    usbutils
   ];
 
   xdg.portal = {
